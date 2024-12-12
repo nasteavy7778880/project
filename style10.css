@@ -1,0 +1,133 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для тела страницы */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+    color: #333; /* Цвет текста по умолчанию */
+    line-height: 1.8;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Заголовок страницы */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555; /* Цвет заголовка */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Улучшенная форма поиска */
+.form-container {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.form-container:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container input[type="text"] {
+    padding: 12px 15px;
+    border: 2px solid #6c757d;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 400px; /* Ограничиваем ширину для больших экранов */
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+.form-container input[type="text"]:focus {
+    border-color: #495057;
+}
+
+.form-container button {
+    padding: 12px 25px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.form-container button:hover {
+    background: linear-gradient(to right, #0056b3, #00408d);
+    transform: translateY(-2px);
+}
+
+/* Стиль для контейнера карточек */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Стиль для отдельных карточек */
+.card {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Выровнять текст по левому краю */
+    color: #333; /* Цвет текста теперь черный */
+}
+
+/* Убедитесь, что текст внутри карточек тоже черный */
+.card h3, .card p {
+    color: #333; /* Черный цвет для заголовков и абзацев */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .form-container input[type="text"],
+    .status-container input[type="text"] {
+        width: 100%;
+    }
+
+    .form-container button,
+    .status-container button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

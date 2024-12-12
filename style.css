@@ -1,0 +1,92 @@
+/* styles.css */
+
+/* Анимация градиента */
+@keyframes gradient {
+    0% { background-color: #6FBF7F; }
+    50% { background-color: #3B8D99; }
+    100% { background-color: #6FBF7F; }
+}
+
+/* Установка шрифта и базовых параметров для страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    animation: gradient 10s ease infinite; /* Анимация градиента */
+    background: linear-gradient(135deg, #6FBF7F, #3B8D99);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+/* Контейнер для всей страницы */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Заголовки */
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Оформление кнопок */
+button {
+    background-color: #fff;
+    color: #3B8D99; /* Цвет текста кнопки */
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+/* Анимация кнопок при наведении */
+button:hover {
+    background-color: #3B8D99; /* Цвет фона кнопки при наведении */
+    color: #fff; /* Цвет текста при наведении */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Для мобильных устройств */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}

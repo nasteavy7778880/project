@@ -1,0 +1,223 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для тела страницы */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #e0eafc, #cfdef3); /* Светлый градиентный фон */
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Заголовок страницы */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Сообщения об успехе */
+p[style*="color: green"] {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+th, td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+th {
+    background: linear-gradient(to right, #007bff, #0056b3); /* Градиентный фон для заголовков */
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+tr:hover {
+    background: #f8f9fa; /* Лёгкий серый оттенок при наведении */
+    transition: background 0.3s ease;
+}
+
+/* Стили для форм */
+form {
+    background: white;
+    border: 1px solid #dfe6e9;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 25px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #ced6e0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+/* Стили для кнопок */
+button {
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: none; /* Убираем возможные тени */
+}
+
+button:hover {
+    background: linear-gradient(to right, #0056b3, #003c8f);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+/* Стили для кнопки "Удалить" */
+.delete-button {
+    background: #28a745; /* Зелёный фон */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Такие же углы, как у кнопки "Редактировать" */
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.delete-button:hover {
+    background: #218838; /* Тёмно-зелёный при наведении */
+    transform: translateY(-3px);
+}
+
+.delete-button:active {
+    transform: translateY(0);
+}
+
+/* Стили для карточек */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    color: #007bff;
+}
+
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    table {
+        font-size: 0.9rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    button {
+        font-size: 0.9rem;
+    }
+
+    .card-container {
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

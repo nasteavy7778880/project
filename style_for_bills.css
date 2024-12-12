@@ -1,0 +1,158 @@
+/* Общие стили */
+body {
+    background-color: #fefefe; /* Легкий фон для минималистичного стиля */
+    color: #2c3e50; /* Темно-синий оттенок для текста */
+    font-family: 'Arial', sans-serif; /* Простые шрифты для читаемости */
+    line-height: 1.8;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Заголовок страницы */
+h1, h2 {
+    color: #34495e; /* Глубокий и контрастный цвет для заголовков */
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Стиль для кнопок навигации */
+.navigate-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #5dade2, #2980b9);
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.navigate-button:hover {
+    background: linear-gradient(135deg, #2980b9, #5dade2);
+    transform: translateY(-2px);
+}
+
+/* Контейнер с карточками */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Индивидуальные карточки */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 280px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовки и описание в карточках */
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #34495e;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+/* Стили для формы поиска */
+form {
+    background-color: #ffffff;
+    border: 1px solid #dfe6e9;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Стили для текстовых инпутов в форме */
+form input[type="text"] {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ced6e0;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    border-color: #1abc9c;
+    box-shadow: 0 0 8px rgba(26, 188, 156, 0.5);
+}
+
+/* Кнопки в форме */
+form button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .navigate-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .card-container {
+        gap: 5px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    form input[type="text"] {
+        width: 100%;
+    }
+}

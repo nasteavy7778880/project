@@ -1,0 +1,103 @@
+/* style_for_admin.css */
+
+/* Общие стили для страницы */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; /* Белый фон */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Темный цвет текста */
+}
+
+/* Контейнер для содержимого */
+.container {
+    background: rgba(255, 255, 255, 0.95); /* Полупрозрачный белый фон для контента */
+    border-radius: 15px; /* Более округлые углы */
+    padding: 30px; /* Увеличенный внутренний отступ */
+    max-width: 800px;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Тень для глубины */
+    border: 1px solid #e0e0e0; /* Легкая граница для контраста */
+}
+
+/* Заголовок */
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4A90E2; /* Цвет заголовка */
+    font-size: 32px; /* Увеличенный размер шрифта */
+}
+
+/* Сообщение об ошибке или успехе */
+.message {
+    color: #ffcc00; /* Цвет сообщения */
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold; /* Жирный шрифт для акцента */
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px; /* Увеличенный внутренний отступ */
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Легкая разделительная линия */
+}
+
+th {
+    background-color: #4A90E2; /* Цвет заголовка таблицы */
+    color: white;
+    font-size: 16px; /* Размер шрифта заголовка */
+}
+
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Подсветка строки при наведении */
+}
+
+/* Стили для кнопок */
+button {
+    background-color: #4A90E2; /* Цвет кнопок */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s; /* Добавлен эффект трансформации */
+}
+
+button:hover {
+    background-color: #3B8D99; /* Цвет при наведении */
+    transform: translateY(-2px); /* Легкий подъем кнопки при наведении */
+}
+
+/* Стили для селектора ролей */
+select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+/* Адаптивные стили */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 20px; /* Уменьшение отступов для мобильных */
+    }
+
+    h2 {
+        font-size: 28px; /* Уменьшение размера заголовка */
+    }
+
+    th, td {
+        padding: 12px; /* Уменьшение отступов в таблице */
+    }
+
+    button {
+        padding: 8px 12px; /* Уменьшение отступов кнопок */
+    }
+}

@@ -1,0 +1,126 @@
+/* Общие стили */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+    margin: 0;
+    padding: 0;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.panel-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap; /* Кнопки переносятся на следующую строку, если не хватает места */
+    justify-content: center; /* Центрирование кнопок */
+    gap: 15px; /* Расстояние между кнопками */
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px; /* Круглые кнопки для современного стиля */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    max-width: 200px;
+    flex: 1 1 auto; /* Позволяет кнопкам равномерно занимать место */
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.logout-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.news-feed {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+}
+
+.news-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item h4 {
+    margin: 0 0 5px;
+    color: #007bff;
+}
+
+.news-item p {
+    margin: 0;
+    color: #555;
+}
+
+.usage-chart-container {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 0 auto 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 800px;
+    display: flex;
+    justify-content: center; /* Центрируем график */
+}
+
+#usageChart {
+    width: 100%;
+    max-width: 600px; /* Максимальная ширина графика */
+    height: auto;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .logout-button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}

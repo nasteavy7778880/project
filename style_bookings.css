@@ -1,0 +1,143 @@
+/* Общие настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Заголовок страницы */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #555;
+}
+
+/* Сообщение об успехе */
+.success-message {
+    text-align: center;
+    color: green;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* Основной контейнер */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Индивидуальные карточки */
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 280px;
+    text-align: left;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Заголовок карточки */
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Информация в карточке */
+.card p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* Кнопки управления */
+.button-group {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
+}
+
+.button {
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.button.approve {
+    background-color: #4CAF50;
+}
+
+.button.deny {
+    background-color: #F44336;
+}
+
+.button.waiting {
+    background-color: #FFC107;
+}
+
+.button:hover {
+    transform: scale(1.1);
+}
+
+/* Кнопка возврата */
+.back-button {
+    display: inline-block;
+    background-color: #555;
+    color: #fff;
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 30px 0; /* Убираем автоцентрирование */
+    max-width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+
+.back-button:hover {
+    background-color: #777;
+}
+
+/* Адаптивный дизайн */
+@media (max-width: 768px) {
+    .card {
+        width: 350px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+
+    .container {
+        gap: 15px;
+    }
+
+    .button-group .button {
+        font-size: 12px;
+    }
+}

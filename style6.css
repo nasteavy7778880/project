@@ -1,0 +1,158 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Стили для тела страницы */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+    color: #333;
+    line-height: 1.8;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Заголовок страницы */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Сообщения об успехе */
+p[style*="color: green"] {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #28a745;
+}
+
+/* Форма поиска услуг */
+form {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    padding: 15px 20px;
+    border: 2px solid #6c757d;
+    border-radius: 30px;
+    width: 300px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    border-color: #495057;
+}
+
+form button {
+    padding: 12px 20px;
+    background: linear-gradient(to right, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+form button:hover {
+    background: linear-gradient(to right, #0056b3, #00408d);
+    transform: translateY(-2px);
+}
+
+/* Стиль для контейнера карточек */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    padding: 0;
+}
+
+/* Стиль для отдельных карточек */
+.card {
+    border: none;
+    border-radius: 8px;
+    padding: 20px;
+    width: 300px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left; /* Выравниваем текст по левому краю */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    margin-bottom: 8px;
+    font-size: 1.3rem;
+    color: #333;
+    text-align: left;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: left; /* Текст выровнен по левому краю */
+}
+
+/* Кнопки бронирования */
+.card form button {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card form button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    form input[type="text"],
+    form button {
+        width: 100%;
+    }
+
+    .card-container {
+        gap: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}

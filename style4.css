@@ -1,0 +1,192 @@
+/* Общие стили */
+body {
+    background-color: #f4f6f9; /* Более светлый фон для контраста */
+    color: #2c3e50; /* Цвет текста */
+    font-family: 'Roboto', sans-serif; /* Шрифт текста */
+    line-height: 1.6; /* Интерлиньяж */
+    margin: 0;
+    padding: 20px; /* Отступ вокруг */
+    box-sizing: border-box; /* Упрощение управления размерами */
+}
+
+.container {
+    max-width: 1000px; /* Ограничение ширины */
+    margin: 0 auto; /* Центрирование */
+    padding: 15px; /* Внутренние отступы */
+    background: #ffffff; /* Цвет фона контейнера */
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Более заметная тень */
+}
+
+/* Заголовки */
+h1, h2 {
+    color: #34495e; /* Цвет заголовков */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-weight: 700; /* Жирный шрифт */
+    text-align: center; /* Центрирование текста */
+    font-size: 26px; /* Увеличение размера шрифта */
+    text-transform: capitalize; /* Заглавные буквы */
+    letter-spacing: 0.5px; /* Пробелы между буквами */
+}
+
+/* Стили для таблицы */
+table {
+    width: 100%; /* Полная ширина */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin-top: 20px; /* Отступ сверху */
+    background-color: #ffffff; /* Цвет фона таблицы */
+    border-radius: 10px; /* Закругление углов */
+    overflow: hidden; /* Убираем переполнение */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Тень для таблицы */
+}
+
+th, td {
+    padding: 16px; /* Увеличение внутреннего отступа */
+    text-align: left; /* Выравнивание текста */
+    border-bottom: 1px solid #eaeaea; /* Легкая граница */
+    font-size: 15px; /* Увеличение размера шрифта */
+}
+
+th {
+    background-color: #1abc9c; /* Цвет фона заголовков */
+    color: white; /* Цвет текста заголовков */
+    text-transform: uppercase; /* Заглавные буквы */
+    font-weight: 600; /* Жирный шрифт */
+    letter-spacing: 0.05em; /* Пробелы между буквами */
+}
+
+tr:hover {
+    background-color: #e8f8f5; /* Цвет строки при наведении */
+    transition: background 0.3s ease; /* Плавный переход */
+}
+
+/* Стили для формы */
+form {
+    background-color: #ffffff; /* Цвет фона формы */
+    border: 1px solid #dfe6e9; /* Легкая граница */
+    border-radius: 8px; /* Закругление углов */
+    padding: 20px; /* Внутренний отступ */
+    margin-top: 20px; /* Отступ сверху */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Более заметная тень */
+    transition: all 0.3s ease; /* Плавный переход */
+}
+
+form:hover {
+    transform: translateY(-3px); /* Легкий подъем при наведении */
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15); /* Увеличение тени */
+}
+
+label {
+    display: block; /* Блочный элемент для меток */
+    margin-bottom: 8px; /* Отступ снизу */
+    font-weight: 600; /* Жирный шрифт */
+    color: #2d3436; /* Цвет меток */
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 90%; /* Ширина инпутов */
+    padding: 12px; /* Внутренний отступ */
+    border: 1px solid #ced6e0; /* Граница */
+    border-radius: 6px; /* Закругление углов */
+    margin-bottom: 20px; /* Отступ снизу */
+    font-size: 14px; /* Размер шрифта */
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05); /* Внутренняя тень */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #1abc9c; /* Цвет границы при фокусе */
+    box-shadow: 0 0 6px rgba(26, 188, 156, 0.4); /* Тень при фокусе */
+    outline: none; /* Убираем обводку */
+}
+
+/* Стили для кнопок */
+.action-buttons {
+    display: flex; /* Используем flex для выравнивания кнопок */
+    gap: 8px; /* Расстояние между кнопками */
+    justify-content: flex-start; /* Выравнивание по горизонтали */
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 4px; /* Отступы внутри контейнера */
+    margin-left: 10px; /* Отступ слева для сдвига вправо */
+}
+
+.action-buttons button {
+    background: #1abc9c; /* Цвет кнопки */
+    padding: 8px 12px; /* Оптимальные отступы */
+    font-size: 12px; /* Читаемый шрифт */
+    border-radius: 4px; /* Умеренное округление */
+    white-space: nowrap; /* Предотвращение переноса текста */
+    min-width: 70px; /* Минимальная ширина */
+    border: none; /* Убираем границу */
+    transition: all 0.3s ease; /* Плавный переход */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для объема */
+    color: white; /* Цвет текста */
+    font-weight: 500; /* Вес шрифта */
+    cursor: pointer; /* Курсор при наведении */
+}
+
+.action-buttons button:hover {
+    background: #16a085; /* Цвет кнопки при наведении */
+    transform: translateY(-2px); /* Легкий эффект подъема */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15); /* Увеличение тени */
+}
+
+.action-buttons .delete-btn {
+    background: #e74c3c; /* Цвет кнопки удаления */
+}
+
+.action-buttons .delete-btn:hover {
+    background: #c0392b; /* Цвет кнопки удаления при наведении */
+}
+
+/* Общие стили кнопок */
+button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Градиент фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем границу */
+    border-radius: 6px; /* Закругление углов */
+    padding: 15px 18px; /* Внутренние отступы */
+    cursor: pointer; /* Курсор при наведении */
+    font-size: 14px; /* Размер шрифта */
+    font-weight: 300; /* Вес шрифта */
+    transition: all 0.3s ease; /* Плавный переход */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+button:hover {
+    background: linear-gradient(135deg, #feb47b, #ff7e5f); /* Цвет кнопки при наведении */
+    transform: translateY(-2px); /* Легкий подъем кнопки */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Увеличение тени */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Меньше отступы на мобильных устройствах */
+    }
+
+    h1, h2 {
+        font-size: 22px; /* Уменьшение размера заголовков */
+    }
+
+    table {
+        font-size: 12px; /* Уменьшение размера шрифта в таблице */
+    }
+
+    th, td {
+        padding: 10px; /* Уменьшение отступов в таблице */
+    }
+
+    .action-buttons button {
+        padding: 6px 8px; /* Меньшие отступы */
+        font-size: 10px; /* Уменьшение размера шрифта кнопок */
+        min-width: 50px; /* Минимальная ширина кнопок */
+    }
+
+    button {
+        font-size: 12px; /* Уменьшение размера шрифта общих кнопок */
+        padding: 10px 12px; /* Уменьшение отступов */
+    }
+}
